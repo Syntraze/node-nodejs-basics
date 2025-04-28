@@ -3,7 +3,7 @@ import { stdin, stdout } from "node:process";
 
 export const transform = async () => {
   const reverseStream = new Transform({
-    transform(chunk, encoding, callback) {
+    transform(chunk, _encoding, callback) {
       const reversed = chunk.toString().split("").reverse().join("");
       callback(null, reversed);
     },

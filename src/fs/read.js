@@ -10,10 +10,9 @@ export const read = async () => {
   const filePath = join(currentDir, "files", "fileToRead.txt");
 
   try {
-    // Check if file exists
+
     await access(filePath, constants.F_OK);
 
-    // Read and print content
     const content = await readFile(filePath, { encoding: "utf8" });
     console.log(content);
   } catch {

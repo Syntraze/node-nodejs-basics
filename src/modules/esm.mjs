@@ -6,7 +6,6 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import "./files/c.js";
 
-// Emulate __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -46,7 +45,6 @@ const main = async () => {
     console.log("To terminate it, use Ctrl+C combination");
   });
 
-  // Export at the end
   return { unknownObject, myServer };
 };
 

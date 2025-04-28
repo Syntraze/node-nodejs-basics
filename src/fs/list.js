@@ -10,13 +10,10 @@ export const list = async () => {
   const filesFolder = join(currentDir, "files");
 
   try {
-    // Check if 'files' folder exists
     await access(filesFolder, constants.F_OK);
 
-    // Read all filenames
     const filenames = await readdir(filesFolder);
 
-    // Print filenames
     console.log(filenames);
   } catch {
     throw new Error("FS operation failed");
